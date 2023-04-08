@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgb(32, 39, 68) ,rgb(246, 81, 30));
+    padding: 10px;
+}
+.to-do{
+    width: 100%;
+    max-width: 540px;
+    background-color: white;
+    margin: 100px auto 20px;
+    padding:40px 30px 70px;
+    border-radius:10px;
+}
+.to-do h2{
+    color: #002765;
+    display:flex;
+    align-items: center;
+    margin-bottom:20px;
+    margin-left: 33%;
+}
+.to-do h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background:#edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom:20px;
+ }
+ input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+    position: relative;
+ }
+ button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size:16px;
+    cursor: pointer;
+    border-radius:40px;
+    /* place-self: absolute;
+    right:0; */
+ }
+ ul li{
+    list-style: none;
+    font-size:17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+ }
+ ul li::before{
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius:50px;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+ }
+ul li.checked{
+    text-decoration: line-through;
+    color: #555;
+}
+ul li.checked::before{
+    background-image: url(checked.png);
+}
+
+ul li span{
+position: absolute;
+right: 0;
+top:5px;
+width: 40px;
+height: 40px;
+font-size:22px;
+color: #555;
+line-height: 40px;
+text-align: center;
+border-radius:50%;
+}
+ul li span:hover{
+    background:#edeef0;
+}
+
+@media screen and (max-width: 645px) {
+button{
+    position:absolute;
+    right: 13vw;
+    height: 50px;
+    width: 70px;
+    padding: 0;
+}
+input{
+    width: 50%;
+    padding-right: 0px;
+}
+.row{
+   width:50%;
+   height: 50px;
+}
+.to-do h2{
+    margin: 0;
+    text-align: center;
+    margin-bottom:20px;
+}
+
+}
